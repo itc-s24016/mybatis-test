@@ -1,5 +1,5 @@
 package select
-//それ以外が返す値は１件以上
+//where で条件付きの検索
 import common.createSessionFactory
 import database.UserDynamicSqlSupport.age
 import database.UserDynamicSqlSupport.name
