@@ -26,7 +26,7 @@ fun main() {
             }
         }
         //年齢が 25歳以上 のデータを返す
-        println("SELECT * FROM user WHERE age >= 25")
+        println("SELECT * FROM user WHERE age >= 25;")
         println(list2)
     }
 }
