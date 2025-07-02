@@ -1,5 +1,5 @@
 package update
-//データを更新する
+//主キーを指定してデータを更新する
 import common.createSessionFactory
 import database.User
 import database.UserMapper
@@ -12,6 +12,15 @@ fun main() {
 
         //主キーを指定して更新する関数
         val count = mapper.updateByPrimaryKeySelective(user)
+        /*
+        【updateByPrimaryKeySelectiveの場合】
+        update user set profile="Bye" where id = 105;
+        指定した列のデータが更新される
+
+        【updateByPrimaryKeyの場合】
+        update user set id = null, name = null, age = null, profile="Bye" where id = 105;
+        全ての列のデータが更新される
+        */
         session.commit()
         println("${count}行のレコードを更新しました")
     }
